@@ -10,7 +10,9 @@ typedef struct _childData {
     double goodness;
 } ChildData;
 
-typedef struct _childDataMgmt ChildDataMgmt;
+typedef struct _childDataMgmt{
+  List* kids;
+} ChildDataMgmt;
 
 /**
  * Creates a structure for child data management
@@ -34,4 +36,4 @@ Node* cdm_get_sorted_data(ChildDataMgmt *cdm);
  */
 void cdm_delete(ChildDataMgmt *cdm);
 
-#endif //SANTACLAUS_CHILDDATAMGMT_H
+#endif
