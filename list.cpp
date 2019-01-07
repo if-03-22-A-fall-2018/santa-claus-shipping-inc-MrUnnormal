@@ -51,7 +51,10 @@ void list_add(List *list, void *data)
  */
 void list_insert_after(Node *node, void *data)
 {
-
+  Node* newNode = (Node*) malloc(sizeof(Node));
+  newNode -> data = data;
+  newNode -> next = node -> next;
+  node -> next = newNode;
 }
 
 /**
@@ -59,7 +62,7 @@ void list_insert_after(Node *node, void *data)
  */
 Node* list_get_first(List *list)
 {
-  return list -> head;;
+  return list -> head;
 }
 
 /**
@@ -68,14 +71,7 @@ Node* list_get_first(List *list)
  */
 Node* list_get_next(Node *node)
 {
-  if(node -> next == 0)
-  {
-    return node;
-  }
-  else
-  {
-    return node -> next;
-  }
+  return node -> next;
 }
 
 /**

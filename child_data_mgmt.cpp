@@ -25,7 +25,8 @@ void cdm_add_data(ChildDataMgmt *cdm, ChildData *data)
     _childData* curr_data=(_childData*)list_get_data(curr);
     Node* prev=0;
 
-    while (curr!=0&&strcmp(curr_data->city, data->city)<=0) {
+    while (curr!=0&&strcmp(curr_data->city, data->city)<=0)
+    {
       prev=curr;
       curr=list_get_next(curr);
       if (curr!=0) {
