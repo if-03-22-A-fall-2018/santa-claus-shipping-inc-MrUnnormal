@@ -24,6 +24,16 @@ List* list_create()
  */
 void list_delete(List *list)
 {
+  /*
+  Node* currNode = list -> head;
+  Node* toBeDeleted;
+  while(currNode != 0)
+  {
+    toBeDeleted = currNode;
+    currNode = currNode -> next;
+    free(toBeDeleted);
+  }
+  */
   free(list);
 }
 
